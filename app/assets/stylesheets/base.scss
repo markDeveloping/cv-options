@@ -3,3 +3,63 @@
 @import '_typography.scss';
 @import 'design-patterns/_buttons.scss';
 @import 'design-patterns/_alpha-beta.scss';
+
+/*typography*/
+h1 {
+	@include heading-36;
+}
+
+h2 {
+	@include heading-24;
+}
+
+p {
+	@include copy-19;
+}
+
+ul, li {
+	@include copy-19;
+}
+
+/*Button style*/
+.button{
+  @include button;
+  @include copy-19;
+}
+
+/*Banner style*/
+.phase-banner  {
+  @include phase-banner(alpha);
+}
+
+/*Grid style*/
+#page-container {
+  @extend %site-width-container;
+}
+.grid-row {
+  @extend %grid-row;
+
+  .column-third {
+    @include grid-column( 1/3 );
+  }
+  .column-two-thirds {
+    @include grid-column( 2/3 );
+  }
+}
+
+.column-two-thirds.right {
+	float: right;
+}
+
+/*Progress tracker style*/
+
+.prog-tracker {
+	border-right: 1px solid $border-colour;
+	li {
+		list-style-type: none;
+		a {
+			text-decoration: none;
+			color: $govuk-blue;
+		}
+	}
+	}
