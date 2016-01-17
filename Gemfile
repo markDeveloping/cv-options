@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # GOV.UK header and footer
 gem 'govuk_template'
+# GOV.UK frontend toolkit (typeography and grid)
+gem 'govuk_frontend_toolkit'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
