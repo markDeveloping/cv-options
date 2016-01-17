@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   root 'static_pages#cv1'
 
-  get 'static_pages/cv1'
+  get 'cv1' => 'static_pages#cv1'
 
-  get 'static_pages/cv2'
+  get 'cv2' => 'static_pages#cv2'
 
-  get 'static_pages/cv3'
+  get 'cv3' => 'static_pages#cv3'
 
-  get 'static_pages/personal_statement'
+  get 'personal_statement' => 'static_pages#personal_statement'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
