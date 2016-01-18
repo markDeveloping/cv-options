@@ -9,17 +9,6 @@
 
 	<div class="grid-row">
 
-		<div class="column-two-thirds right">
-		<h1>CV</h1>
-		<p>Parmesan cow jarlsberg. Hard cheese pepper jack cut the cheese port-salut cheese and <%= link_to "wine paneer", '#', class: 'external-link' %> caerphilly ricotta.</p>
-		<ul>
-			<li>Camembert</li>
-			<li>Lancashire</li>
-			<li>Chedder</li>
-		</ul>
-		<%= link_to "Save and continue",   personal_statement_path, class: "button" %>
-		</div>
-
 		<div class="column-third">
 		<ul class="prog-tracker">
 			<li><%= link_to "Eligibility checker", '#' %></li>
@@ -29,6 +18,42 @@
 			<li><%= link_to "Diversity and inclusion", '#' %></li>
 			<li><%= link_to "Additional requirements", '#' %></li>
 		</ul>
+		</div>
+
+		<div class="column-two-thirds">
+		<h1>CV</h1>
+		<p>Parmesan cow jarlsberg. Hard cheese pepper jack cut the cheese port-salut cheese and <%= link_to "wine paneer", '#', class: 'external-link' %> caerphilly ricotta.</p>
+		<ul>
+			<li>Camembert</li>
+			<li>Lancashire</li>
+			<li>Chedder</li>
+		</ul>
+		<form>
+		<fieldset>
+		<legend>CV details</legend>
+		<div class="form-group">
+		<label class="form-label" for="full-name-f1">Career history</label>
+  		<textarea class="form-textarea" id="full-name-f1" rows="20" cols="40"></textarea>
+  		</div>
+  		<div class="form-group">
+		<label class="form-label" for="full-name-f1">Qualification details</label>
+  		<textarea class="form-textarea" id="full-name-f1" rows="20" cols="40"></textarea>
+  		</div>
+  		<div class="form-group">
+		<label class="form-label" for="full-name-f1">Skills</label>
+  		<textarea class="form-textarea" id="full-name-f1" rows="20" cols="40"></textarea>
+  		</div>
+  		<div class="form-group">
+			<label class="form-checkbox" for="checkbox-telephone-number">
+			<input id="removed-persona-details" name="details-removed" type="checkbox" value="">
+			I have removed identifiable details
+			</label>
+		</div>
+  		</fieldset>
+  		</form>
+  		<div class="form-group">
+		<%= link_to "Save and continue",   personal_statement_path, class: "button" %>
+		</div>
 		</div>
 
 	</div>
