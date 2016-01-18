@@ -1,2 +1,36 @@
-<h1>StaticPages#cv3</h1>
-<p>Find me in app/views/static_pages/cv3.html.erb</p>
+<div id="page-container">
+
+	<div class="phase-banner">
+	  <p>
+	    <strong class="phase-tag">ALPHA</strong>
+	    <span>This is a prototype – your <%= mail_to "support.csjobs@csresourcing.gsi.gov.uk" , "feedback" %> will help us to improve it.</span>
+	  </p>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds right">
+		<h1>CV</h1>
+		<p>Parmesan cow jarlsberg. Hard cheese pepper jack cut the cheese port-salut cheese and <%= link_to "wine paneer", '#', class: 'external-link' %> caerphilly ricotta.</p>
+		<ul>
+			<li>Camembert</li>
+			<li>Lancashire</li>
+			<li>Chedder</li>
+		</ul>
+		<%= link_to "Save and continue",   personal_statement_path, class: "button" %>
+		</div>
+
+		<div class="column-third">
+		<ul class="prog-tracker">
+			<li><%= link_to "Eligibility checker", '#' %></li>
+			<li><%= link_to "Your details", '#' %></li>
+			<li class="prog-item--active"><%= link_to "CV",   cv1_path %></li>
+			<li><%= link_to "Personal statement",   personal_statement_path %></li>
+			<li><%= link_to "Diversity and inclusion", '#' %></li>
+			<li><%= link_to "Additional requirements", '#' %></li>
+		</ul>
+		</div>
+
+	</div>
+
+</div>

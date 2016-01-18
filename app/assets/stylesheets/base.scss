@@ -6,7 +6,7 @@
 
 /*typography*/
 h1 {
-	@include heading-36;
+	@include heading-48;
 }
 
 h2 {
@@ -19,6 +19,24 @@ p {
 
 ul, li {
 	@include copy-19;
+}
+
+a.external-link {
+	@include external-link-default;
+	@include external-link-19;
+}
+
+a {
+	color:$link-colour;
+}
+
+a:hover {
+	color: $link-hover-colour;
+	text-decoration: none;
+}
+
+a:visited {
+	color: $link-visited-colour;
 }
 
 /*Button style*/
@@ -62,16 +80,34 @@ ul, li {
 		padding: 0;
 		list-style-type: none;
 		a {
-			padding: 12px 10px 8px 5px;
+			padding: 11px 10px 10px 5px;
 			text-decoration: none;
 			color: $govuk-blue;
 			display: block;
+		}
+
+		a:hover {
+			background-color: $panel-colour;
+		}
+
+		a:before {
+			padding-left: 19px;
+			content: "";
+		}
+
+		a:after {
+			float: right;
+			content: "\203A";
 		}
 	}
 	.prog-item--active {
 		a {
 		background-color: $govuk-blue;
 		color: #ffffff;
+		}
+
+		a:hover {
+			background-color: $govuk-blue;
 		}
 	}
 	}
