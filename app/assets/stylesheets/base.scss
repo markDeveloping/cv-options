@@ -3,6 +3,7 @@
 @import '_typography.scss';
 @import 'design-patterns/_buttons.scss';
 @import 'design-patterns/_alpha-beta.scss';
+@import "elements/forms";
 
 /*typography*/
 h1 {
@@ -26,6 +27,7 @@ a.external-link {
 	@include external-link-19;
 }
 
+/*Link style*/
 a {
 	color:$link-colour;
 }
@@ -37,6 +39,12 @@ a:hover {
 
 a:visited {
 	color: $link-visited-colour;
+}
+
+/*form style*/
+input:focus {
+	outline: none !important;
+	border: 3px solid $focus-colour;
 }
 
 /*Button style*/
