@@ -40,10 +40,10 @@ ul, li {
   @extend %grid-row;
 
   .column-third {
-    @include grid-column( 1/3 );
+    @include grid-column( 2/7 );
   }
   .column-two-thirds {
-    @include grid-column( 2/3 );
+    @include grid-column( 5/7 );
   }
 }
 
@@ -55,11 +55,23 @@ ul, li {
 
 .prog-tracker {
 	border-right: 1px solid $border-colour;
+	padding-left: 0;
+
 	li {
+		margin: 0;
+		padding: 0;
 		list-style-type: none;
 		a {
+			padding: 12px 10px 8px 5px;
 			text-decoration: none;
 			color: $govuk-blue;
+			display: block;
+		}
+	}
+	.prog-item--active {
+		a {
+		background-color: $govuk-blue;
+		color: #ffffff;
 		}
 	}
 	}
