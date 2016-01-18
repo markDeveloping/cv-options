@@ -42,6 +42,26 @@ a:visited {
 }
 
 /*form style*/
+.form-label {
+	font-weight: bold;
+}
+
+textarea {
+	width:100%;
+	font-size: 19px;
+	text-transform: none;
+	border:2px solid #6f777b;
+}
+
+textarea:focus {
+	outline: none !important;
+	border: 3px solid $focus-colour;
+}
+
+label.form-checkbox {
+	@include copy-19;
+}
+
 input:focus {
 	outline: none !important;
 	border: 3px solid $focus-colour;
@@ -71,10 +91,6 @@ input:focus {
   .column-two-thirds {
     @include grid-column( 5/7 );
   }
-}
-
-.column-two-thirds.right {
-	float: right;
 }
 
 /*Progress tracker style*/
