@@ -4,6 +4,9 @@
 @import 'design-patterns/_buttons.scss';
 @import 'design-patterns/_alpha-beta.scss';
 @import "elements/forms";
+@import "elements/elements-typography";
+@import "elements/icons"; 
+@import "elements/lists";  
 
 /*typography*/
 h1 {
@@ -45,6 +48,13 @@ a:visited {
 .form-label {
 	font-weight: bold;
 }
+
+.help-text {
+	display: block;
+	font-weight: normal;
+	color: $secondary-text-colour;
+}
+
 fieldset {
 	border: 0;
 	padding: 0;
