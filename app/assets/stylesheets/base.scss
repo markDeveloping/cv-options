@@ -87,6 +87,13 @@ input:focus {
 	border: 3px solid $focus-colour;
 }
 
+/*Word counter*/
+
+.word-counter {
+	padding: 3px 5px;
+	background-color: $panel-colour;
+}
+
 /*Button style*/
 .button{
   @include button;
