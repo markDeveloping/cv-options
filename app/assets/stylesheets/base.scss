@@ -11,6 +11,7 @@
 @import "elements/buttons";
 @import "elements/layout";
 @import "elements/forms";
+@import "elements/forms/form-block-labels";
 @import "elements/icons"; 
 @import "elements/lists"; 
 
@@ -78,6 +79,11 @@ textarea:focus {
 
 label.form-checkbox {
 	@include copy-19;
+}
+
+label.block-label:focus {
+	outline: none !important;
+	border: 3px solid $focus-colour;
 }
 
 input:focus {
