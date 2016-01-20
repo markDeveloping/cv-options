@@ -41,18 +41,14 @@ Civil Service Jobs - Personal statement - GOV.UK
 
 		<div class="column-two-thirds">
 		<h1 class="heading-large">Personal statement</h1>
-		<p>Literally cred sustainable locavore, authentic four loko lo-fi synth butcher portland selvage DIY <a rel="external" href="#">roof party</a> pickled.</p> <p>Fashion axe waistcoat meh sustainable fixie keffiyeh kitsch, swag mumblecore slow-carb bitters listicle. Crucifix thundercats umami, asymmetrical austin paleo migas.</p>
-			<ul class="list list-bullet">
-				<li>waistcoat</li>
-				<li>photo booth</li>
-			</ul>
+		<%= render 'layouts/pers_content'%>
 			<form>
 				<fieldset>
 					<legend>Personal statement</legend>
 				<div class="form-group">
-					<label class="form-label" for="full-name-f1">Enter your statement<span class="help-text">Not to exceed 700 words</span></label>
-			  		<textarea class="form-textarea" name="pers-statement" id="full-name-f1" rows="50" cols="72"></textarea>
-			  		<p>Word count <span class="word-counter count__pers-statement">0</span></p>
+					<label class="form-label" for="full-name-f1">Enter your statement<span class="help-text">Not to exceed 1400 words</span></label>
+			  		<textarea class="form-textarea" name="pers-statement" id="word_count" rows="50" cols="72"></textarea>
+					<p>Word count <span class="word-counter count__pers-statement" id="display_count">0</span></p>
 			  	</div>
 			  	<div class="form-group">
 			  		<label class="form-checkbox" for="checkbox-telephone-number">
@@ -71,13 +67,23 @@ Civil Service Jobs - Personal statement - GOV.UK
 </div>
 </div>
 <script type="text/javascript">
-	$(document).ready(function(){
-		// Global variable to capture number of words for the word count feature
-		var count = 0;
-		// Function triggered on keydown focused on the textarea input field
-		$([name='pers-statement']).keydown(function(){
-		
-		});
+	$(document).ready(function () {
+	var max_count = 1400;
+    var wordCounts = {};
+    
+     $("#word_count").on('keyup', function() {
+        var words = this.value.match(/\S+/g).length;
+        if (words > max_count) {
+            // Split the string on first 200 words and rejoin on spaces
+            var trimmed = $(this).val().split(/\s+/, max_count).join(" ");
+            // Add a space at the end to keep new typing making new words
+            $(this).val(trimmed + " ");
+        }
+        else {
+            $('#display_count').html(words);
+        }
     });
-});
+    
+    
+    }).keyup();
 </script>
