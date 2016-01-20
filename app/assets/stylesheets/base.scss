@@ -1,22 +1,20 @@
 @import '_grid_layout.scss';
 @import '_colours.scss';
 @import '_typography.scss';
+@import "shims"; 
 @import 'design-patterns/_buttons.scss';
 @import 'design-patterns/_alpha-beta.scss';
-@import "elements/forms";
+@import "url-helpers";
+@import "elements/helpers";
+@import "elements/reset";
 @import "elements/elements-typography";
+@import "elements/buttons";
+@import "elements/layout";
+@import "elements/forms";
 @import "elements/icons"; 
-@import "elements/lists";  
+@import "elements/lists"; 
 
 /*typography*/
-h1 {
-	@include heading-48;
-}
-
-h2 {
-	@include heading-24;
-}
-
 p {
 	@include copy-19;
 }
@@ -97,7 +95,7 @@ input:focus {
 /*Button style*/
 .button{
   @include button;
-  @include copy-19;
+  font-size: 19px;
 }
 
 /*Banner style*/
@@ -106,18 +104,8 @@ input:focus {
 }
 
 /*Grid style*/
-#page-container {
-  @extend %site-width-container;
-}
 .grid-row {
-  @extend %grid-row;
-
-  .column-third {
-    @include grid-column( 2/7 );
-  }
-  .column-two-thirds {
-    @include grid-column( 5/7 );
-  }
+	margin-top: 15px;
 }
 
 /*Progress tracker style*/

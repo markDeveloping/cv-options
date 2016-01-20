@@ -1,3 +1,22 @@
+<% content_for :page_title do %>
+Civil Service Jobs - Personal statement - GOV.UK
+<% end %>
+<% content_for :head do %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<% end %>
+<% content_for :inside_header do%>
+<div class='header-proposition'>
+  <div class='content'>
+    <nav id='proposition-menu'>
+      <a href='/' id='proposition-name'>Civil Service Jobs</a>
+    </nav>
+  </div>
+</div>
+<% end %>
+
+<div id="content">
 <div id="page-container">
 
 	<div class="phase-banner">
@@ -9,20 +28,20 @@
 
 	<div class="grid-row">
 
-		<div class="column-third">
-			<ul class="prog-tracker">
-				<li><%= link_to "Eligibility checker", '#' %></li>
-				<li><%= link_to "Your details", '#' %></li>
-				<li><%= link_to "CV",   cv1_path %></li>
-				<li class="prog-item--active"><%= link_to "Personal statement",   personal_statement_path %></li>
-				<li><%= link_to "Diversity and inclusion", '#' %></li>
-				<li><%= link_to "Additional requirements", '#' %></li>
-			</ul>
+		<div class="column-one-third">
+		<ul class="prog-tracker">
+			<li><%= link_to "Eligibility checker", '#' %></li>
+			<li><%= link_to "Your details", '#' %></li>
+			<li><%= link_to "CV",   cv1_path %></li>
+			<li class="prog-item--active"><%= link_to "Personal statement",   personal_statement_path %></li>
+			<li><%= link_to "Diversity and inclusion", '#' %></li>
+			<li><%= link_to "Additional requirements", '#' %></li>
+		</ul>
 		</div>
 
 		<div class="column-two-thirds">
-			<h1>Personal statement</h1>
-			<p>Literally cred sustainable locavore, authentic four loko lo-fi synth butcher portland selvage DIY <%= link_to "roof party", '#', class: 'external-link' %> pickled.</p> <p>Fashion axe waistcoat meh sustainable fixie keffiyeh kitsch, swag mumblecore slow-carb bitters listicle. Crucifix thundercats umami, asymmetrical austin paleo migas.</p>
+		<h1 class="heading-large">Personal statement</h1>
+		<p>Literally cred sustainable locavore, authentic four loko lo-fi synth butcher portland selvage DIY <a rel="external" href="#">roof party</a> pickled.</p> <p>Fashion axe waistcoat meh sustainable fixie keffiyeh kitsch, swag mumblecore slow-carb bitters listicle. Crucifix thundercats umami, asymmetrical austin paleo migas.</p>
 			<ul class="list list-bullet">
 				<li>waistcoat</li>
 				<li>photo booth</li>
@@ -44,12 +63,12 @@
 		  		</fieldset>
 	  		</form>
 	  		<div class="form-group">
-				<%= link_to "Save and continue",   personal_statement_path, class: "button" %>
-			</div>
+		<%= link_to "Save and continue",   personal_statement_path, class: "button" %>
+		</div>
 		</div>
 
 	</div>
-
+</div>
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){

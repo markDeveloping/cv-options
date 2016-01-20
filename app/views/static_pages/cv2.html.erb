@@ -1,3 +1,22 @@
+<% content_for :page_title do %>
+Civil Service Jobs - CV Option 2 - GOV.UK
+<% end %>
+<% content_for :head do %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<% end %>
+<% content_for :inside_header do%>
+<div class='header-proposition'>
+  <div class='content'>
+    <nav id='proposition-menu'>
+      <a href='/' id='proposition-name'>Civil Service Jobs</a>
+    </nav>
+  </div>
+</div>
+<% end %>
+
+<div id="content">
 <div id="page-container">
 
 	<div class="phase-banner">
@@ -9,7 +28,7 @@
 
 	<div class="grid-row">
 
-		<div class="column-third">
+		<div class="column-one-third">
 		<ul class="prog-tracker">
 			<li><%= link_to "Eligibility checker", '#' %></li>
 			<li><%= link_to "Your details", '#' %></li>
@@ -21,8 +40,8 @@
 		</div>
 
 		<div class="column-two-thirds">
-		<h1>CV</h1>
-		<p>Parmesan cow jarlsberg. Hard cheese pepper jack cut the cheese port-salut cheese and <%= link_to "wine paneer", '#', class: 'external-link' %> caerphilly ricotta.</p>
+		<h1 class="heading-large">CV</h1>
+		<p>Parmesan cow jarlsberg. Hard cheese pepper jack cut the cheese port-salut cheese and <%= link_to "wine paneer", '#', rel: 'external' %> caerphilly ricotta.</p>
 		<ul class="list list-bullet">
 			<li>Camembert</li>
 			<li>Lancashire</li>
@@ -43,5 +62,5 @@
 		</div>
 
 	</div>
-
+</div>
 </div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'test/test'
+
   root 'static_pages#cv1'
 
   get 'cv1' => 'static_pages#cv1'
