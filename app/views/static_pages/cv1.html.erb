@@ -28,31 +28,27 @@ Civil Service Jobs - CV Option 1 - GOV.UK
 
 	<div class="grid-row">
 
-		<div class="column-one-third">
-		<ul class="prog-tracker">
-			<li><%= link_to "Eligibility checker", '#' %></li>
-			<li><%= link_to "Your details", '#' %></li>
-			<li class="prog-item--active"><%= link_to "CV",   cv1_path %></li>
-			<li><%= link_to "Personal statement",   personal_statement_path %></li>
-			<li><%= link_to "Diversity and inclusion", '#' %></li>
-			<li><%= link_to "Additional requirements", '#' %></li>
-		</ul>
-		</div>
+		<%= render 'layouts/progress_tracker' %>
 
 		<div class="column-two-thirds">
-		<h1 class="heading-large">CV</h1>
 		<%= render 'layouts/cv_content' %>
 		<form>
 		<fieldset>
 		<legend>CV details</legend>
 		<div class="form-group">
-		<label class="form-label" for="full-name-f1">Career history<span class="help-text">Provide your full history</span></label>
+		<label class="form-label" for="full-name-f1">Career history<span class="help-text">Enter your full history starting with the most recent</span></label>
   		<textarea class="form-textarea" name="career-history" id="full-name-f1" rows="20" cols="40"></textarea>
   		</div>
   		<div class="form-group">
-		<label class="form-label" for="full-name-f1">Qualification details<span class="help-text">Include academic and professional qualifications</span></label>
+		<label class="form-label" for="full-name-f1">Qualification details<span class="help-text">Enter your educational and professional qualifications</span></label>
   		<textarea class="form-textarea" name="qualifications" id="full-name-f1" rows="20" cols="40"></textarea>
   		</div>
+  		<div class="form-group">
+			<label class="block-label" for="waste-type-1">
+	        <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+	        I have removed personal information that could identify me
+	    	</label>
+		</div>
   		</fieldset>
   		</form>
   		<div class="form-group">

@@ -20,6 +20,10 @@ p {
 	@include copy-19;
 }
 
+p.margin_top {
+	margin-top: 10px;
+}
+
 ul, li {
 	@include copy-19;
 }
@@ -89,6 +93,11 @@ label.block-label:focus {
 input:focus {
 	outline: none !important;
 	border: 3px solid $focus-colour;
+}
+
+/*Checkbox*/
+.block-label {
+	font-size: 19px;
 }
 
 /*Word counter*/

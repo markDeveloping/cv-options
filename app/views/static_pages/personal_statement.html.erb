@@ -32,7 +32,7 @@ Civil Service Jobs - Personal statement - GOV.UK
 		<ul class="prog-tracker">
 			<li><%= link_to "Eligibility checker", '#' %></li>
 			<li><%= link_to "Your details", '#' %></li>
-			<li><%= link_to "CV",   cv1_path %></li>
+			<li><%= link_to "Your CV",   cv1_path %></li>
 			<li class="prog-item--active"><%= link_to "Personal statement",   personal_statement_path %></li>
 			<li><%= link_to "Diversity and inclusion", '#' %></li>
 			<li><%= link_to "Additional requirements", '#' %></li>
@@ -48,14 +48,14 @@ Civil Service Jobs - Personal statement - GOV.UK
 				<div class="form-group">
 					<label class="form-label" for="full-name-f1">Enter your statement<span class="help-text">Not to exceed 1400 words</span></label>
 			  		<textarea class="form-textarea" name="pers-statement" id="word_count" rows="50" cols="72"></textarea>
-					<p>Word count <span class="word-counter count__pers-statement" id="display_count">0</span></p>
+					<p class="margin_top">Word count <span class="word-counter count__pers-statement" id="display_count">0</span></p>
 			  	</div>
 			  	<div class="form-group">
-			  		<label class="form-checkbox" for="checkbox-telephone-number">
-				    <input id="removed-persona-details" name="details-removed" type="checkbox" value="">
-				    I have removed identifiable details
-				    </label>
-		  		</div>
+					<label class="block-label" for="waste-type-1">
+			        <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+			        I have removed personal information that could identify me
+			    	</label>
+				</div>
 		  		</fieldset>
 	  		</form>
 	  		<div class="form-group">
