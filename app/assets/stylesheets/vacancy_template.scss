@@ -1,0 +1,16 @@
+// Place all the styles related to the VacancyTemplate controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import '_typography.scss';
+
+* {
+	@include copy-16;
+}
+
+.form-set {
+	padding-bottom: 10px;
+}
+
+textarea {
+	width: 90%;
+}

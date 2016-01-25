@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+	  layout 'govuk_template'
   def cv1
   end
 

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'test/test'
-
+  
   root 'static_pages#cv1'
+
+  get 'ats' => 'vacancy_template#ats_template'
 
   get 'cv1' => 'static_pages#cv1'
 
