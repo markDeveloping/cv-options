@@ -36,6 +36,7 @@ a.external-link {
 /*Link style*/
 a {
 	color:$link-colour;
+	@include copy-19;
 }
 
 a:hover {
