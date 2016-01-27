@@ -29,6 +29,7 @@ $(document).ready(function(){
 		if(blindSift === "Yes" || blindSift === "Not selected"){
 			$('.current').addClass('hidden');
 			$('.new').removeClass('hidden');
+			$('.enter-details').removeClass('hidden');
 		}
 		else if(blindSift === "No") {
 			$('.new').addClass('hidden');
