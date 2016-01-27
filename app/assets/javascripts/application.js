@@ -17,6 +17,7 @@
 
 
 $(document).ready(function(){
+	/*Capture all of the variables for working conditional statements*/
 	function variables() {
    blindSift = $('input[name="blind-sift"]:checked').val();
    cvCurrent = $('input[name="CV-upload"]:checked').val();
@@ -25,25 +26,35 @@ $(document).ready(function(){
    skillsNew = $('input[name="skills-new"]:checked').val();
 	};
 
-	function addRemove() {
-		if(blindSift === "Yes" || blindSift === "Not selected"){
-			$('.current').addClass('hidden');
-			$('.new').removeClass('hidden');
-			$('.enter-details').removeClass('hidden');
+	function addRemove() {	
+	/*If new CV do you want to include a section for skills?*/
+		if (blindSift === "No") {
+			$('.skills-optional').addClass('hidden');
 		}
-		else if(blindSift === "No") {
-			$('.new').addClass('hidden');
-			$('.current').removeClass('hidden');
+		else if(cvNew === "No" || cvNew === "Not selected") {
+			$('.skills-optional').addClass('hidden');
+		}
+		else {
+			$('.skills-optional').removeClass('hidden');
 		};
-
-		if(supportCurrent === "No" || supportCurrent === "Not selected"){
+	/*If old additional attachment is yes, provide details*/
+		if(blindSift === "Yes"){
 			$('.enter-details').addClass('hidden');
 		}
-		else if(supportCurrent === "Yes"){
-			$('.enter-details').removeClass('hidden');
+		else if(supportCurrent === "No" || supportCurrent === "Not selected"){
+			$('.enter-details').addClass('hidden');
 		}
 		else {
 			$('.enter-details').removeClass('hidden');
+		};
+	/*If yes and not select show new section triggers*/
+		if(blindSift === "Yes" || blindSift === "Not selected"){
+			$('.old').addClass('hidden');
+			$('.new').removeClass('hidden');
+		}
+		else {
+			$('.new').addClass('hidden');
+			$('.old').removeClass('hidden');
 		};
 	};
 
