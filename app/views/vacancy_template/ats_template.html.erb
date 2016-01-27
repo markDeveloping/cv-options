@@ -53,26 +53,51 @@
 			</fieldset>
 		</form>
 </div>
-<div class="column-one-half hidden">
-	<h2 class="heading-medium">Application form setup</h2>
-	<p>Rules:</p>
+<div class="column-one-half">
+	<h2 class="heading-medium">Output scenarios</h2>
+	<p>If name blind recruitment is yes or not selected:</p>
 	<ul class="list list-bullet">
-		<li>Remove job history</li>
-		<li>Add upload CV</li>
-		<li>Add your CV</li>
-		<li>Include skills in your CV</li>
-		<li>Remove skills in your CV</li>
-		<li>Add additional attachment upload</li>
-		<li>Add personal statement e-form</li>
+		<li class="blind-yes">anonymise application form</li>
+		<li class="blind-yes">ask new CV/Personal statement questions</li>
+		<li class="blind-yes">hide existing CV/additional attachment questions</li>
+	</ul>
+	<p>If new ask for CV question is yes:</p>
+	<ul class="list list-bullet">
+		<li class="cv-yes">add new CV section to app form</li>
+		<li class="cv-yes">remove 'Job history' section</li>
+		<li class="cv-yes">ask new do you want skills question</li>
+	</ul>
+	<p>If include a section on skills is yes:</p>
+	<ul class="list list-bullet">
+		<li class="skills-yes">add skills to new CV section</li>
+	</ul>
+	<p>If ask for a personal statement is yes:</p>
+	<ul class="list list-bullet">
+		<li class="statement-yes">add new personal statement section to app form</li>
+	</ul>
+	<p>If name blind recruitment is no:</p>
+	<ul class="list list-bullet">
+		<li class="blind-no">override anonymity</li>
+		<li class="blind-no">ask existing CV/additional attachment questions</li>
+	</ul>
+	<p>If existing CV question is yes:</p>
+	<ul class="list list-bullet">
+		<li class="old-cv-yes">remove 'Job history' section</li>
+		<li class="old-cv-yes">add existing CV upload section to app form</li>
+	</ul>
+	<p>If existing additional attachment question is yes:</p>
+	<ul class="list list-bullet">
+		<li class="attachment-yes">add existing upload attachment section to app form</li>
 	</ul>
 </div>
 <div class="column-two-thirds">
 	<h2 class="heading-medium">Acceptance criteria</h2>
 	<p>Story 1:</p>
 	<ul class="list list-bullet">
-		<li>Add new radio yes/no field 'Blind sift'</li>
+		<li>Replace existing override anonymisation question with 'Name blind recruitment' question</li>
+		<li>Add new radio yes/no field 'Name blind recruitment'</li>
 		<ul class="list list-bullet">
-		<li>Hide field if user === vacancy holder</li>
+		<li>Hide field if user is a vacancy holder</li>
 		<li>Default value to 'yes' for all departments via job family templates</li>
 		<li>Users with recuiter role can see and edit value</li>
 		</ul>
