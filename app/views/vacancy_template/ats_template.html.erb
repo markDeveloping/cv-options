@@ -20,7 +20,7 @@
 			<input id="yes-select-cv" type="radio" name="CV-upload" value="Yes"><label for="yes-select-cv">Yes</label>
 			<input id="no-select-cv" type="radio" name="CV-upload" value="No"><label for="no-select-cv">No</label>
 		</div>
-		<div class="form-set old current">
+		<div class="form-set current">
 				Upload additional attachment (current)<br>
 			<input id="not-select-supporting" type="radio" name="supporting-upload" value="Not selected" checked><label for="not-select-supporting">Not selected</label>
 			<input id="yes-select-supporting" type="radio" name="supporting-upload" value="Yes"><label for="yes-select-supporting">Yes</label>
@@ -59,7 +59,7 @@
 	<ul class="list list-bullet">
 		<li class="blind-yes">anonymise application form</li>
 		<li class="blind-yes">ask new CV/Personal statement questions</li>
-		<li class="blind-yes">hide existing CV/additional attachment questions</li>
+		<li class="blind-yes">hide existing CV questions</li>
 	</ul>
 	<p>If new ask for CV question is yes:</p>
 	<ul class="list list-bullet">
@@ -78,16 +78,12 @@
 	<p>If name blind recruitment is no:</p>
 	<ul class="list list-bullet">
 		<li class="blind-no">override anonymity</li>
-		<li class="blind-no">ask existing CV/additional attachment questions</li>
+		<li class="blind-no">ask existing CV questions</li>
 	</ul>
 	<p>If existing CV question is yes:</p>
 	<ul class="list list-bullet">
 		<li class="old-cv-yes">remove 'Job history' section</li>
 		<li class="old-cv-yes">add existing CV upload section to app form</li>
-	</ul>
-	<p>If existing additional attachment question is yes:</p>
-	<ul class="list list-bullet">
-		<li class="attachment-yes">add existing upload attachment section to app form</li>
 	</ul>
 </div>
 <div class="column-two-thirds">
@@ -113,8 +109,8 @@
 			<li>second input label will be: "Include a section for skills"</li>
 			<li>third input label will be: "Ask for a personal statement"</li>
 		</ul>
-		<li>if name blind sift is 'yes' or 'not selected' show the new fields and hide the existing CV and supporting document fields</li>
-		<li>if name blind sift is 'no' hide the new fields and show the existing CV and supporting document fields</li>
+		<li>if name blind sift is 'yes' or 'not selected' show the new fields and hide the existing CV field</li>
+		<li>if name blind sift is 'no' hide the new fields and show the existing CV field</li>
 	</ul>
 	<p>Story 3 - hide job history section going forward if CV (upload or form versions) are asked for</p>
 	<ul class="list list-bullet">

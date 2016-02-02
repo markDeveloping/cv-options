@@ -38,10 +38,7 @@ $(document).ready(function(){
 			$('.skills-optional').removeClass('hidden');
 		};
 	/*If old additional attachment is yes, provide details*/
-		if(blindSift === "Yes"){
-			$('.enter-details').addClass('hidden');
-		}
-		else if(supportCurrent === "No" || supportCurrent === "Not selected"){
+		if(supportCurrent === "No" || supportCurrent === "Not selected"){
 			$('.enter-details').addClass('hidden');
 		}
 		else {
